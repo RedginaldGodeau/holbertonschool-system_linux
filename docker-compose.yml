@@ -1,0 +1,11 @@
+services:
+  gcc:
+    build:
+      context: .
+      dockerfile: docker/gcc/Dockerfile
+    volumes:
+      - ./:/app
+      - ./docker/gcc/vimrc:/usr/share/vim/vimrc
+    working_dir: /app
+    tty: true
+    
