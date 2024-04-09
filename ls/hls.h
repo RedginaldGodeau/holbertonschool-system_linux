@@ -9,7 +9,7 @@
 #define DEFAULT_PATH "./"
 
 /**
- * struct hls_parameters - struct for ls parameters 
+ * struct hls_parameters_t - struct for ls parameters
  * @path: char *
  * @by_the_line: bool
  * @more_info: bool
