@@ -1,19 +1,19 @@
 #include "./hls.h"
 
 /**
- * main - Main function
+ * hls_create - Create hls struct
  *
  * Description: List file in current dir
  * Return: Success / Failure
 */
-int main(void)
+hls_parameters hls_create(char *path, int by_the_line, int more_info, int hidden_file, int almost_all)
 {
-	char *default_path = "./";
+	hls_parameters param;
+	param.path = path;
+	param.more_info = more_info;
+	param.by_the_line = by_the_line;
+	param.hidden_file = hidden_file;
+	param.almost_all = almost_all;
 
-	if (show_files(default_path) == 1)
-	{
-		exit(EXIT_FAILURE);
-	}
-
-	exit(EXIT_SUCCESS);
+	return param;
 }

@@ -23,3 +23,16 @@ syntax enable
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+command! Bettyf call BettyFunc()
+command! Bettys call BettyStruct()
+
+function! BettyFunc()
+    let text = "/**\nfunction_name - desc\n@parameterx: desc param\n\nDescription:...\nReturn:...\n*/"
+    execute "normal! i" . text
+endfunction
+
+function! BettyStruct()
+    let text = "/**\nstruct my_struct - Short description\n@a: First member\n\nDescription: Longer description\n*/"
+    execute "normal! i" . text
+endfunction
