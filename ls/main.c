@@ -32,6 +32,6 @@ int main(int argc, char **argv)
 			break;
 	}
 
-	exit(EXIT_SUCCESS);
+	exit(0);
 
 }
