@@ -25,9 +25,9 @@ int print_files(
 	if (params.more_details)
 		more_details(path, file_name);
 
-	printf("%s%c",
+	printf("%s%s",
 			file_name,
-			(params.line_by_line || params.more_details) ? '\n' : '\t');
+			(params.line_by_line || params.more_details) ? "\n" : "  ");
 
 	return (0);
 }
