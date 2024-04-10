@@ -29,5 +29,5 @@ int main(int argc, char **argv)
 		show_file(params, ".");
 
 	free(paths);
-	exit(EXIT_SUCCESS);
+	exit(0);
 }
