@@ -1,15 +1,16 @@
-#include "./file_system.h"
+#include "./filesystem.h"
 
 /**
- * file_info_print - print info of file
+ * function_name - print details
  * @sta: stat
- * @grp: struct group
- * @pwd: struct passwd
- * @formatted_date: string
- * Description: print info of file
- */
-void file_info_print(struct stat sta, struct group *grp, struct passwd *pwd,
-		char *formatted_date
+ * @grp: group
+ * @pwd: passwd
+ * @date: string
+ *
+ * Description: print details
+*/
+void print_more_details(struct stat sta, struct group *grp, struct passwd *pwd,
+		char *date
 		)
 {
 	printf((S_ISDIR(sta.st_mode))  ? "d" : "-");
@@ -27,5 +28,5 @@ void file_info_print(struct stat sta, struct group *grp, struct passwd *pwd,
 	printf("%s ", pwd->pw_name);
 	printf("%s ", grp->gr_name);
 	printf("%6ld ", sta.st_size);
-	printf("%s ", formatted_date);
+	printf("%s ", date);
 }
