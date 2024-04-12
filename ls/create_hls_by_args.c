@@ -14,22 +14,22 @@ hls_parameters create_hls_by_args(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (argv[0] == '-'
-				switch (argv[1])
-				{
+		if (argv[0] == '-')
+			switch (argv[1])
+			{
 				case '1':
-				params.line_by_line = 1;
-				break;
+					params.line_by_line = 1;
+					break;
 				case 'a':
-				params.hidden_files = 1;
-				break;
+					params.hidden_files = 1;
+					break;
 				case 'A':
-				params.almost_all = 1;
-				break;
+					params.almost_all = 1;
+					break;
 				case 'l':
-				params.more_details = 1;
-				break;
-				}
-				}
-				return (params);
-				}
+					params.more_details = 1;
+					break;
+			}
+	}
+	return (params);
+}
