@@ -16,19 +16,8 @@ int show_file(hls_parameters params, char *path)
 	list_of_dir = opendir(path);
 	errno = 0;
 	if (!list_of_dir)
-		switch (errno)
-		{
-			case EACCES:
-				fprintf(stderr, "Permission denied\n");
-				exit(2);
-			case ENOENT:
-				fprintf(stderr, "Directory does exist\n");
-				exit(2);
-			case ENOTDIR:
-				fprintf(stderr, "%s is not a directory\n", path);
-				exit(1);
-		}
-
+		error_handler(errno, path);
+	
 	while ((current_file = readdir(list_of_dir)) != NULL)
 		print_files(params, path, current_file->d_name);
 	if (!params.line_by_line && !params.more_details)

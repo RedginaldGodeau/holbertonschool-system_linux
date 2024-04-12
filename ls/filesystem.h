@@ -15,4 +15,5 @@ int show_file(hls_parameters, char *);
 int print_files(hls_parameters, char *, char *);
 int more_details(char *, char *);
 void print_more_details(struct stat, struct group *, struct passwd *, char *);
+void error_handler(int, char *);
 #endif
