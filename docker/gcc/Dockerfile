@@ -1,6 +1,6 @@
-FROM ubuntu
+FROM ubuntu:14.04
 RUN apt-get update && \
-    apt-get install -yq git make vim clang build-essential curl cmake python3.10-dev && \
+    apt-get install -yq git make vim clang build-essential curl cmake python-dev valgrind && \
     apt-get install -yq gcc-4.8
 
 RUN git clone https://github.com/hs-hq/Betty.git

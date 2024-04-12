@@ -27,7 +27,7 @@ int print_files(
 
 	printf("%s%s",
 			file_name,
-			(params.line_by_line || params.more_details) ? "\n" : "  ");
+			(params.line_by_line || params.more_details) ? "\n" : "\t");
 
 	return (0);
 }

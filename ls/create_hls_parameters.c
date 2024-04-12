@@ -17,12 +17,11 @@ hls_parameters create_hls_parameters(
 		int more_details
 		)
 {
-	hls_parameters params = {
-		line_by_line,
-		hidden_files,
-		almost_all,
-		more_details
-	};
+	hls_parameters params;
+	params.line_by_line = line_by_line;
+	params.hidden_files = hidden_files;
+	params.almost_all = almost_all;
+	params.more_details = more_details;
 
 	return (params);
 }
