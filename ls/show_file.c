@@ -17,7 +17,7 @@ int show_file(hls_parameters params, char *path)
 	errno = 0;
 	if (!list_of_dir)
 		error_handler(errno, path);
-	
+
 	while ((current_file = readdir(list_of_dir)) != NULL)
 		print_files(params, path, current_file->d_name);
 	if (!params.line_by_line && !params.more_details)

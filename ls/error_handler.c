@@ -1,5 +1,12 @@
 #include "./filesystem.h"
 
+/**
+ * error_handler - handle errors
+ * @err: errno
+ * @path: string
+ *
+ * Description: error handler
+ */
 void error_handler(int err, char *path)
 {
 	switch (err)
