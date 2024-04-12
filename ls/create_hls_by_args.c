@@ -14,8 +14,8 @@ hls_parameters create_hls_by_args(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (argv[0] == '-')
-			switch (argv[1])
+		if (argv[i][0] == '-')
+			switch (argv[i][1])
 			{
 				case '1':
 					params.line_by_line = 1;
