@@ -13,10 +13,13 @@ int show_file(hls_parameters params, char *path)
 	DIR *list_of_dir;
 	struct dirent *current_file;
 
+    errno = 0;
 	list_of_dir = opendir(path);
-	errno = 0;
-	if (!list_of_dir)
-		error_handler(errno, path);
+    if (!list_of_dir)
+    {
+        error_handler(errno, path);
+        return (0);
+    }
 
 	while ((current_file = readdir(list_of_dir)) != NULL)
 		print_files(params, path, current_file->d_name);

@@ -21,9 +21,11 @@ void error_handler(int err, char *path)
 					"./hls: cannot access %s: No such file or directory\n",
 					path);
 			exit(2);
-		case ENOTDIR:
+        case ENOTDIR:
 			fprintf(stderr, "./hls: cannot access %s: %s is not a directory\n",
 					path, path);
 			exit(1);
+        default:
+            exit(1);
 	}
 }

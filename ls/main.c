@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	{
 		if (n_path > 1)
 			printf("%s:\n", paths[i]);
-		show_file(params, paths[i]);
+        show_file(params, paths[i]);
 		if (n_path > 1)
 			putchar('\n');
 	}
